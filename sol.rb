@@ -8,12 +8,10 @@ class Sol < Formula
   version "0.1.0"
   license "MIT"
 
-  depends_on "tmux"
-
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nevinsm/sol/releases/download/v0.1.0/sol_0.1.0_darwin_amd64.tar.gz"
-      sha256 "aa240819b1f5a1caa2e773bf4c477a9fe3d3aa9aa817ed1f35d3ea851aea8b51"
+      sha256 "0e73e0e0a3fa2a937ad59c189c54e8e608bdd4e7aa5e521a2e9ea08e4d4c0de7"
 
       define_method(:install) do
         bin.install "sol"
@@ -21,7 +19,7 @@ class Sol < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nevinsm/sol/releases/download/v0.1.0/sol_0.1.0_darwin_arm64.tar.gz"
-      sha256 "722adbdabfb311411fb0c60f7f5dceb920dc793cddd6628544343d2468ee5745"
+      sha256 "97cc2d43339839d997fb8f2e1f12dc0d000c376f1958272111276c75851b038e"
 
       define_method(:install) do
         bin.install "sol"
@@ -32,14 +30,14 @@ class Sol < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/nevinsm/sol/releases/download/v0.1.0/sol_0.1.0_linux_amd64.tar.gz"
-      sha256 "71c17d1ec224c41a3c53c4d84d67976295fd2944c6ac04da9ed73c905d3053cc"
+      sha256 "c73bcdb87f672fc251ec10db7389d94efe70fc895dbad0af0535d318806c7b61"
       define_method(:install) do
         bin.install "sol"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nevinsm/sol/releases/download/v0.1.0/sol_0.1.0_linux_arm64.tar.gz"
-      sha256 "68158ac16d0b1d93098b6104ae1ea0c951373fedb488f5f3795e728395e7e55f"
+      sha256 "58e48560509ade6f2e5b9c6585fd380990399ec3f5aa3d642c73dfe21bc8f947"
       define_method(:install) do
         bin.install "sol"
       end
